@@ -1,0 +1,542 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+/* 
+    1.vị trí
+    2.kích thước
+    3.màu sắc
+    4.kiểu dáng
+    ...
+*/
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+
+    
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.3333%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important ;
+}
+
+.mt-16 {
+    margin-top: 16px !important ;
+}
+
+.clear {
+    /* khắc phục lỗi của position fixed */
+    clear: both;
+    /* cách khác: css vào phần lỗi: overflow: hidden */
+
+}
+
+
+#main {
+    
+}
+
+#header {
+    height: 46.5px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav {
+    list-style: none;
+}
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+/* vai trò của dòng dưới? */
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0 24px;
+    display: inline-block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+
+#nav .subnav {
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 2px 16px;
+    line-height: 22.5px  ;
+}
+
+#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+    position: static;
+}
+
+#nav .nav-arrow-down {
+    font-size: 11px;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn {
+    float: right;
+    padding: 0 24px ;
+   
+}
+
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336!important;
+    /* Trỏ chuột hình bàn tay */
+    cursor: pointer;  
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color:#fff;
+    font-size: 15px;
+    line-height: 46.5px;
+    
+    
+}
+
+#slider {
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url('/assets/css/img/slider/slider1.jpg') top center / cover no-repeat ;
+    
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 0;
+    padding: 32px 16px;
+    text-align: center;
+    right: 0;
+    left: 0;
+    color: #fff;
+}
+
+#slider .text-heading {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#slider .text-description {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+
+#content {
+      /* padding-bottom: 112px; */
+}
+
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    /* khoảng cách giữa các kí tự */
+    letter-spacing: 3px;
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    margin: 15px 0 ;
+    /* italic : chữ nghiêng */
+    font-style: italic;
+    /* opacity: độ trong suốt */
+    opacity: 0.6;
+
+}
+
+#content .about-text {
+    margin-top: 25px;
+    /* căn lề 2 bên văn bản */
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#content .members-list {
+    margin-top: 48px;
+    /* overflow: hidden */
+
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100% /3);
+    text-align: center;
+
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: #fff;
+}
+
+.tickets-list li{
+    list-style: none;
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tickets-list .Sold-out  {
+    color: #fff;
+    background-color: #f44336;
+    padding: 4px 5px;
+    margin-left: 10px;
+}
+
+.tickets-list .Sold-out {
+
+}
+
+.tickets-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    /* margin-top dùng được khi có float */
+    margin-top: -2px;
+}
+
+.places-list {
+    margin-top: 32px ;
+    overflow: hidden;
+
+}
+
+
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+
+}   
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;    
+}
+    
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+
+.place-buy-btn:hover {
+    background-color: #ccc;
+}
+
+.contact-content {
+   padding-top: 32px ;
+}
+
+.contact-info {
+    font-size: 18px;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+    line-height: 1.4;
+}
+
+.contact-form {
+    font-size: 15px;
+
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+
+}
+
+.contact-form .form-submit-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.map-section {
+
+}
+
+.map-section img {
+    width: 100%;
+}
+
+#footer {
+    padding: 60px 16px;
+    text-align: center;
+
+}
+
+#footer .socoials-list {
+    font-size: 24px;
+}
+
+#footer .socoials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .socoials-list a:hover {
+    opacity: 0.6;
+} 
+
+#footer .copyright {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    
+}
+
+#footer .copyright a:hover {
+    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5) ;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 40px);      
+    min-height: 200px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    color: #fff;
+    cursor: pointer; 
+}
+
+.modal-close:hover {
+    opacity: 0.5;
+}
+
+.modal-header {
+    color: #fff;
+    background-color: #009688 ;
+    height: 130px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal-header-icon {
+    margin-right: 0;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+#buy-tickets {
+    background-color: #009688 ;
+    color: #fff;
+    width: 100%;
+    border: none;
+    padding: 17px;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#buy-tickets:hover {
+    opacity: 0.5;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+
+}
+
+.modal-footer a {
+    color:#009688;
+}
+
